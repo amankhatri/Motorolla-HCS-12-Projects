@@ -67,9 +67,13 @@ Entry:
             ADDB $1004
             ADDB $1006
             ADDB $1008
-            ADDB $1010  
+            ADDB $1010 
+;peter asked me to swap the contents of accumulator A and accumulator B
+            STAA $1011
+            STAB $1012
+            LDAA $1012
+            LDAB $1011 
       
-           
 hangHereForever:
             NOP
             BRA  hangHereForever

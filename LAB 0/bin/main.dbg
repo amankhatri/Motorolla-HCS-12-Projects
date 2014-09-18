@@ -8690,9 +8690,6 @@ MY_EXTENDED_RAM: SECTION
 ; Insert here your data definition.
 ;Counter     ds.w 1
 ;FiboRes     ds.w 1
-fred        ds.b 1  ;ds.b is assembler directive. it is for code warrior saying declare fred of size 1 byte
-george      ds.b 1
-ralph       ds.b 1
 
 ; code section
 MyCode:     SECTION
