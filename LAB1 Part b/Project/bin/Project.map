@@ -1,5 +1,5 @@
 *** EVALUATION ***
-PROGRAM "C:\Users\Aman\Documents\GitHub\Motorolla-HCS-12-Projects\Motorolla-HCS-12-Projects\LAB1\bin\Project.absHCS12_Serial_Monitor.abs"
+PROGRAM "C:\Users\Aman\Documents\GitHub\Motorolla-HCS-12-Projects\Motorolla-HCS-12-Projects\Project\bin\Project.abs"
 
 *********************************************************************************************
 TARGET SECTION
@@ -47,10 +47,10 @@ MODULE:                 -- main.asm.o --
      _Startup                                  C000       0       0       0   .init       
      main                                      C000       0       0       0   .init       
      loopForever                               C02B      15      21       0   .init       
-     LED0                                      C040      12      18       0   .init       
-     LED1                                      C052      12      18       0   .init       
-     LED2                                      C064      12      18       0   .init       
-     LED3                                      C076      12      18       0   .init       
+     forSwitch2                                C040      12      18       0   .init       
+     forSwitch3                                C052      12      18       0   .init       
+     forSwitch4                                C064      12      18       0   .init       
+     forSwitch5                                C076      12      18       0   .init       
      turnOff                                   C088       6       6       0   .init       
 - VARIABLES:
 - LABELS:
@@ -67,7 +67,8 @@ MODULE STATISTIC
 SECTION USE IN OBJECT-ALLOCATION SECTION
 ---------------------------------------------------------------------------------------------
 SECTION: ".init"
-  main _Startup Entry loopForever LED0 LED1 LED2 LED3 turnOff 
+  main _Startup Entry loopForever forSwitch2 forSwitch3 forSwitch4 forSwitch5 
+  turnOff 
 
 *********************************************************************************************
 OBJECT LIST SORTED BY ADDRESS
@@ -77,10 +78,10 @@ OBJECT LIST SORTED BY ADDRESS
      _Startup                                  C000       0       0       0   .init       
      Entry                                     C000      2B      43       0   .init       
      loopForever                               C02B      15      21       0   .init       
-     LED0                                      C040      12      18       0   .init       
-     LED1                                      C052      12      18       0   .init       
-     LED2                                      C064      12      18       0   .init       
-     LED3                                      C076      12      18       0   .init       
+     forSwitch2                                C040      12      18       0   .init       
+     forSwitch3                                C052      12      18       0   .init       
+     forSwitch4                                C064      12      18       0   .init       
+     forSwitch5                                C076      12      18       0   .init       
      turnOff                                   C088       6       6       0   .init       
 
 *********************************************************************************************

@@ -71,47 +71,19 @@ Entry:
      LDAA PTIH
 ;SW5
      CMPA  #$FE
-     BEQ   LED0 
+     BEQ   forSwitch5 
 ;SW4
      CMPA  #$FD
-     BEQ   LED1
+     BEQ   forSwitch4
 ;SW3
      CMPA  #$FB
-     BEQ   LED2
+     BEQ   forSwitch3
 ;SW2
      CMPA  #$F7
-     BEQ   LED3 
+     BEQ   forSwitch2 
      bra        loopForever
-    
-LED0:
-    LDAA #$00
-    LDAA PORTB
-    ORAA #$01
-    STAA PORTB 
-    LDAA PTJ
-    ORAA #$FD
-    STAA PTJ
-    BRA turnOff
-    
-LED1:
-    LDAA #$00
-    LDAA PORTB
-    ORAA #$02
-    STAA PORTB
-    LDAA PTJ
-    ORAA #$FD
-    STAA PTJ  
-    BRA  turnOff
-LED2:
-    LDAA #$00
-    LDAA PORTB
-    ORAA #$04
-    STAA PORTB   
-    LDAA PTJ
-    ORAA #$FD
-    STAA PTJ
-    BRA turnOff
-LED3:
+forSwitch2:
+;LED3
     LDAA #$00
     LDAA PORTB
     ORAA #$08
@@ -120,7 +92,35 @@ LED3:
     ORAA #$FD
     STAA PTJ 
     BRA turnOff
-
+forSwitch3:
+;LED3 & LED2
+    LDAA #$00
+    LDAA PORTB
+    ORAA #$0C
+    STAA PORTB
+    LDAA PTJ
+    ORAA #$FD
+    STAA PTJ 
+    BRA turnOff
+forSwitch4:
+ ;LED3$LED2$LED1
+    LDAA #$00
+    LDAA PORTB
+    ORAA #$0E
+    STAA PORTB
+    LDAA PTJ
+    ORAA #$FD
+    STAA PTJ 
+    BRA turnOff
+forSwitch5:
+    LDAA #$00
+    LDAA PORTB
+    ORAA #$0F
+    STAA PORTB
+    LDAA PTJ
+    ORAA #$FD
+    STAA PTJ 
+    BRA turnOff 
 turnOff:
     LDAA #$00
     STAA PORTB
